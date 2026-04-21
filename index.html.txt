@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Healthcare Centre | Your Health, Our Priority</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+                        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Top Info Bar -->
+    <div class="bg-blue-700 text-white py-2 px-4 hidden md:block">
+        <div class="container mx-auto flex justify-between items-center text-sm">
+            <div>
+                <i class="fas fa-phone mr-2"></i> Emergency: +91 98765 43210
+                <i class="fas fa-envelope ml-4 mr-2"></i> info@shreehealthcare.com
+            </div>
+            <div>
+                <i class="fas fa-map-marker-alt mr-2"></i> 123 Main Street, City Center, India
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-700 flex items-center">
+                <i class="fas fa-hand-holding-medical mr-2"></i> SHREE <span class="text-gray-700 ml-1">HEALTHCARE</span>
+            </a>
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#home" class="hover:text-blue-700 transition">Home</a>
+                <a href="#about" class="hover:text-blue-700 transition">About Us</a>
+                <a href="#services" class="hover:text-blue-700 transition">Services</a>
+                <a href="#doctors" class="hover:text-blue-700 transition">Doctors</a>
+                <a href="#contact" class="bg-blue-700 text-white px-5 py-2 rounded-full hover:bg-blue-800 transition">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="home" class="hero-bg h-[600px] flex items-center text-white">
+        <div class="container mx-auto px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">Your Health is Our <br><span class="text-blue-400">First Priority</span></h1>
+            <p class="text-lg mb-8 max-w-lg text-gray-200">Shree Healthcare Centre provides world-class medical facilities with expert doctors and 24/7 emergency services.</p>
+            <div class="flex space-x-4">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 px-8 py-3 rounded-md font-semibold transition">Get Started</a>
+                <a href="#services" class="bg-white text-blue-700 hover:bg-gray-100 px-8 py-3 rounded-md font-semibold transition">Our Services</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section -->
+    <section class="container mx-auto px-6 -mt-16 relative z-10">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-xl text-center border-b-4 border-blue-600">
+                <i class="fas fa-user-md text-3xl text-blue-600 mb-2"></i>
+                <h3 class="text-xl font-bold">50+</h3>
+                <p class="text-gray-500">Expert Doctors</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl text-center border-b-4 border-blue-600">
+                <i class="fas fa-procedures text-3xl text-blue-600 mb-2"></i>
+                <h3 class="text-xl font-bold">200+</h3>
+                <p class="text-gray-500">Modern Beds</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl text-center border-b-4 border-blue-600">
+                <i class="fas fa-smile text-3xl text-blue-600 mb-2"></i>
+                <h3 class="text-xl font-bold">10k+</h3>
+                <p class="text-gray-500">Happy Patients</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl text-center border-b-4 border-blue-600">
+                <i class="fas fa-ambulance text-3xl text-blue-600 mb-2"></i>
+                <h3 class="text-xl font-bold">24/7</h3>
+                <p class="text-gray-500">Emergency Care</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">Our Specialized Services</h2>
+            <div class="w-20 h-1 bg-blue-600 mx-auto mb-12"></div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-heartbeat text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cardiology</h3>
+                    <p class="text-gray-600">Advanced heart care services including diagnostics, surgery, and rehabilitation.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Neurology</h3>
+                    <p class="text-gray-600">Comprehensive treatment for disorders of the nervous system and brain health.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-bone text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Orthopedics</h3>
+                    <p class="text-gray-600">Specialized care for joint replacements, spine surgery, and sports injuries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment & Contact -->
+    <section id="contact" class="bg-blue-50 py-20">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Schedule an Appointment</h2>
+                    <p class="text-gray-600 mb-8">Fill out the form and our representative will call you back to confirm your slot with the best available specialist.</p>
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Full Name" class="w-full p-3 rounded border border-gray-300 focus:outline-blue-500">
+                        <input type="email" placeholder="Email Address" class="w-full p-3 rounded border border-gray-300 focus:outline-blue-500">
+                        <div class="grid grid-cols-2 gap-4">
+                            <select class="w-full p-3 rounded border border-gray-300 focus:outline-blue-500">
+                                <option>Select Department</option>
+                                <option>Cardiology</option>
+                                <option>Neurology</option>
+                                <option>General Physician</option>
+                            </select>
+                            <input type="date" class="w-full p-3 rounded border border-gray-300 focus:outline-blue-500">
+                        </div>
+                        <button class="w-full bg-blue-700 text-white font-bold py-3 rounded hover:bg-blue-800 transition">BOOK NOW</button>
+                    </form>
+                </div>
+                <div class="rounded-lg overflow-hidden shadow-lg h-96">
+                    <!-- Google Map Placeholder -->
+                    <iframe class="w-full h-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.796077366655!2d72.897362!3d19.076090!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTnCsDA0JzMzLjkiTiA3MsKwNTMnNTAuNSJF!5e0!3m2!1sen!2sin!4v1634567890123!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-xl font-bold mb-4">Shree Healthcare</h3>
+                <p class="text-gray-400">Providing excellence in medical care with a touch of compassion since 1995.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                <ul class="text-gray-400 space-y-2">
+                    <li><a href="#" class="hover:text-white">Our Doctors</a></li>
+                    <li><a href="#" class="hover:text-white">Health Plans</a></li>
+                    <li><a href="#" class="hover:text-white">Careers</a></li>
+                    <li><a href="#" class="hover:text-white">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Contact Us</h4>
+                <p class="text-gray-400">123, Healthcare Street<br>Mumbai, Maharashtra<br>Phone: +91 98765 43210</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-semibold mb-4">Follow Us</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-2xl hover:text-blue-500"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-2xl hover:text-blue-400"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-2xl hover:text-red-500"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500">
+            <p>&copy; 2023 Shree Healthcare Centre. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

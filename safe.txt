@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Healthcare Centre | Vijayanagar, Bengaluru</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: '#004a7c',
+                        brandGold: '#b58e3e',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 30, 60, 0.7), rgba(0, 30, 60, 0.7)), 
+                        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Top Info Bar -->
+    <div class="bg-brandBlue text-white py-2 px-4 hidden lg:block border-b border-brandGold">
+        <div class="container mx-auto flex justify-between items-center text-sm">
+            <div>
+                <i class="fas fa-map-marker-alt mr-2 text-brandGold"></i> 633/62, 5th main, 13th Cross Rd, Vijayanagar, Bengaluru
+            </div>
+            <div>
+                <i class="fas fa-phone mr-2 text-brandGold"></i> Emergency: +91 9187111055
+                <i class="fas fa-envelope ml-4 mr-2 text-brandGold"></i> shreehealthcarecentre25@gmail.com
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="logo.png.jpg" alt="Shree Healthcare Logo" class="h-14 w-auto mr-3">
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold text-brandBlue leading-none uppercase">SHREE</span>
+                    <span class="text-xs tracking-[0.2em] text-gray-500 font-semibold uppercase">Healthcare Centre</span>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-8 font-medium items-center">
+                <a href="#home" class="hover:text-brandGold transition">Home</a>
+                <a href="#about" class="hover:text-brandGold transition">About</a>
+                <a href="#services" class="hover:text-brandGold transition">Services</a>
+                <a href="#booking" class="bg-brandBlue text-white px-6 py-2 rounded shadow-md hover:bg-opacity-90 transition border-b-2 border-brandGold">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="home" class="hero-bg h-[550px] flex items-center text-white">
+        <div class="container mx-auto px-6 text-center md:text-left">
+            <div class="max-w-3xl border-l-4 border-brandGold pl-6">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Your Health, Our <br><span class="text-brandGold">Highest Priority</span></h1>
+                <p class="text-lg mb-8 text-gray-200">State-of-the-art medical facilities located in the heart of Vijayanagar. Professional care for you and your family.</p>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-start">
+                    <a href="#booking" class="bg-brandGold px-8 py-3 rounded-md font-semibold hover:bg-yellow-700 transition uppercase tracking-wider shadow-lg">Book Appointment</a>
+                    <a href="#contact" class="bg-white text-brandBlue px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition uppercase tracking-wider shadow-lg">Find Us</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="container mx-auto px-6 -mt-12 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-6 rounded-lg shadow-xl text-center border-b-4 border-brandGold">
+                <h3 class="text-3xl font-bold text-brandBlue">25+</h3>
+                <p class="text-gray-500 text-sm font-semibold uppercase">Years Excellence</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl text-center border-b-4 border-brandGold">
+                <h3 class="text-3xl font-bold text-brandBlue">50+</h3>
+                <p class="text-gray-500 text-sm font-semibold uppercase">Expert Doctors</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl text-center border-b-4 border-brandGold">
+                <h3 class="text-3xl font-bold text-brandBlue">10k+</h3>
+                <p class="text-gray-500 text-sm font-semibold uppercase">Happy Patients</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl text-center border-b-4 border-brandGold">
+                <h3 class="text-3xl font-bold text-brandBlue">24/7</h3>
+                <p class="text-gray-500 text-sm font-semibold uppercase">Emergency Care</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" alt="Hospital interior" class="rounded-lg shadow-2xl border-r-8 border-brandGold">
+                </div>
+                <div class="md:w-1/2">
+                    <span class="text-brandGold font-bold tracking-widest uppercase text-sm">About Our Hospital</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brandBlue mt-2 mb-6">Providing Advanced Medical Care in Vijayanagar</h2>
+                    <p class="text-gray-600 mb-6 text-lg">Shree Healthcare Centre has been a pillar of the community for decades. We combine compassionate nursing with the latest diagnostic technology to ensure you get back to your best health.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded mr-4"><i class="fas fa-microscope text-brandBlue"></i></div>
+                            <div><h4 class="font-bold">Latest Tech</h4><p class="text-sm text-gray-500">Advanced diagnostic tools</p></div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-blue-100 p-2 rounded mr-4"><i class="fas fa-user-md text-brandBlue"></i></div>
+                            <div><h4 class="font-bold">Top Specialists</h4><p class="text-sm text-gray-500">Board certified doctors</p></div>
+                        </div>
+                        <div class="flex items-start mt-4">
+                            <div class="bg-blue-100 p-2 rounded mr-4"><i class="fas fa-ambulance text-brandBlue"></i></div>
+                            <div><h4 class="font-bold">Quick Response</h4><p class="text-sm text-gray-500">24/7 Ambulance service</p></div>
+                        </div>
+                        <div class="flex items-start mt-4">
+                            <div class="bg-blue-100 p-2 rounded mr-4"><i class="fas fa-hand-holding-medical text-brandBlue"></i></div>
+                            <div><h4 class="font-bold">Affordable</h4><p class="text-sm text-gray-500">Care for every budget</p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-brandBlue">Our Specialties</h2>
+                <div class="w-24 h-1 bg-brandGold mx-auto mt-4"></div>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Cardiology -->
+                <div class="group bg-white p-8 rounded-xl shadow-md border-t-4 border-transparent hover:border-brandGold transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-50 text-brandBlue rounded-full flex items-center justify-center mb-6 group-hover:bg-brandBlue group-hover:text-white transition">
+                        <i class="fas fa-heartbeat text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-brandBlue uppercase tracking-wide">Cardiology</h3>
+                    <p class="text-gray-500 mb-4">Complete heart care including diagnostics, BP management, and specialist consultations.</p>
+                </div>
+                <!-- General Surgery -->
+                <div class="group bg-white p-8 rounded-xl shadow-md border-t-4 border-transparent hover:border-brandGold transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-50 text-brandBlue rounded-full flex items-center justify-center mb-6 group-hover:bg-brandBlue group-hover:text-white transition">
+                        <i class="fas fa-crutch text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-brandBlue uppercase tracking-wide">Orthopedics</h3>
+                    <p class="text-gray-500 mb-4">Expert treatment for bone injuries, joint pain, and specialized orthopedic surgeries.</p>
+                </div>
+                <!-- Pediatrics -->
+                <div class="group bg-white p-8 rounded-xl shadow-md border-t-4 border-transparent hover:border-brandGold transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-50 text-brandBlue rounded-full flex items-center justify-center mb-6 group-hover:bg-brandBlue group-hover:text-white transition">
+                        <i class="fas fa-baby text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4 text-brandBlue uppercase tracking-wide">Pediatrics</h3>
+                    <p class="text-gray-500 mb-4">Dedicated child healthcare and immunization services for infants and adolescents.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking Section -->
+    <section id="booking" class="py-20 bg-brandBlue relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="absolute top-0 right-0 w-64 h-64 bg-brandGold opacity-10 rounded-full -mr-32 -mt-32"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
+                <div class="md:w-1/3 bg-brandGold p-12 text-white">
+                    <h2 class="text-3xl font-bold mb-6">Book Your Visit</h2>
+                    <p class="mb-8 opacity-90">Skip the queue. Book an appointment online and our coordinator will call you back to confirm the slot.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-3"></i>
+                            <span>Zero Waiting Time</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-3"></i>
+                            <span>Confirm via Phone</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-3"></i>
+                            <span>Expert Consultations</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 p-8 md:p-12">
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-bold text-brandBlue mb-2">Full Name</label>
+                            <input type="text" placeholder="Enter your name" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-brandBlue mb-2">Phone Number</label>
+                            <input type="tel" placeholder="+91 00000 00000" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none transition">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-brandBlue mb-2">Department</label>
+                            <select class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none transition">
+                                <option>Select Specialization</option>
+                                <option>General Physician</option>
+                                <option>Cardiology</option>
+                                <option>Pediatrics</option>
+                                <option>Orthopedics</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-bold text-brandBlue mb-2">Preferred Date</label>
+                            <input type="date" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none transition">
+                        </div>
+                        <div class="md:col-span-2">
+                            <label class="block text-sm font-bold text-brandBlue mb-2">Message (Optional)</label>
+                            <textarea rows="3" placeholder="Tell us about your symptoms" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none transition"></textarea>
+                        </div>
+                        <div class="md:col-span-2">
+                            <button type="submit" class="w-full bg-brandBlue text-white font-bold py-4 rounded-lg hover:bg-opacity-90 shadow-lg transition uppercase tracking-widest">Confirm Booking</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-brandBlue uppercase tracking-wider">Reach Us</h2>
+                <div class="w-20 h-1 bg-brandGold mx-auto mt-2"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="space-y-6">
+                    <div class="bg-gray-50 p-8 rounded-lg border-l-8 border-brandGold shadow-md">
+                        <h3 class="text-xl font-bold text-brandBlue mb-4">Location & Contacts</h3>
+                        <p class="text-gray-600 mb-6 text-lg leading-relaxed">
+                            633/62, 5th main, 13th Cross Rd,<br>
+                            MC Layout, Vijayanagar,<br>
+                            Bengaluru, Karnataka 560040
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-center text-brandBlue font-bold">
+                                <i class="fas fa-phone-alt mr-3 text-brandGold"></i> +91 91871 11055
+                            </div>
+                            <div class="flex items-center text-brandBlue font-bold">
+                                <i class="fas fa-envelope mr-3 text-brandGold"></i> shreehealthcarecentre25@gmail.com
+                            </div>
+                        </div>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=633/62,+5th+main,+13th+Cross+Rd,+MC+Layout,+Vijayanagar,+Bengaluru,+Karnataka+560040" 
+                           target="_blank" 
+                           class="mt-8 flex items-center justify-center bg-brandBlue text-white px-6 py-4 rounded shadow hover:bg-opacity-90 transition font-bold uppercase">
+                            <i class="fas fa-map-marked-alt mr-2"></i> Get Route Map
+                        </a>
+                    </div>
+                    <div class="bg-brandBlue text-white p-8 rounded-lg shadow-md">
+                        <h4 class="font-bold text-brandGold uppercase mb-2">Emergency Service</h4>
+                        <p class="text-2xl font-bold">OPEN 24 HOURS</p>
+                        <p class="text-sm opacity-80 mt-2">Our specialists are available on call round the clock for emergencies.</p>
+                    </div>
+                </div>
+
+                <div class="h-[500px] rounded-lg overflow-hidden shadow-2xl border-4 border-white">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.978252277051!2d77.5342738753239!3d12.973256087342125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3dd94132808b%3A0x6b301c1071286c40!2s633%2F62%2C%205th%20Main%20Rd%2C%2013th%20Cross%20Rd%2C%20MC%20Layout%2C%20Vijayanagar%2C%20Bengaluru%2C%20Karnataka%20560040!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" 
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brandBlue text-white pt-16 pb-8">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <img src="logo.png.jpg" alt="Shree Healthcare Logo" class="h-16 mb-6 brightness-110">
+                <p class="text-gray-400 text-sm">Providing premium healthcare in Vijayanagar since 1995. Committed to clinical excellence and patient safety.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 border-b border-brandGold pb-2 inline-block uppercase tracking-widest">Departments</h4>
+                <ul class="text-gray-400 space-y-3 text-sm">
+                    <li>Cardiology</li>
+                    <li>Orthopedics</li>
+                    <li>Pediatrics</li>
+                    <li>General Medicine</li>
+                    <li>Diagnostics</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 border-b border-brandGold pb-2 inline-block uppercase tracking-widest">Support</h4>
+                <ul class="text-gray-400 space-y-3 text-sm">
+                    <li><a href="#booking" class="hover:text-brandGold transition">Book Appointment</a></li>
+                    <li><a href="#contact" class="hover:text-brandGold transition">Emergency Help</a></li>
+                    <li><a href="#" class="hover:text-brandGold transition">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 border-b border-brandGold pb-2 inline-block uppercase tracking-widest">Connect</h4>
+                <p class="text-gray-400 text-sm mb-4">Follow us on social media for health tips.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:bg-brandGold hover:border-brandGold transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:bg-brandGold hover:border-brandGold transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-xs uppercase tracking-widest">
+            <p>&copy; 2024 Shree Healthcare Centre. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Healthcare Centre | Vijayanagar, Bengaluru</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brandBlue: '#004a7c',
+                        brandGold: '#b58e3e',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+        body { font-family: 'Poppins', sans-serif; scroll-behavior: smooth; }
+        .hero-bg {
+            background: linear-gradient(rgba(0, 30, 60, 0.7), rgba(0, 30, 60, 0.7)), 
+                        url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #004a7c; border-radius: 5px; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Top Info Bar -->
+    <div class="bg-brandBlue text-white py-2 px-4 hidden lg:block border-b border-brandGold">
+        <div class="container mx-auto flex justify-between items-center text-sm">
+            <div>
+                <i class="fas fa-map-marker-alt mr-2 text-brandGold"></i> 633/62, 5th main, 13th Cross Rd, Vijayanagar, Bengaluru
+            </div>
+            <div>
+                <i class="fas fa-phone mr-2 text-brandGold"></i> Emergency: +91 9187111055
+                <i class="fas fa-envelope ml-4 mr-2 text-brandGold"></i> shreehealthcarecentre25@gmail.com
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="flex items-center">
+                <img src="logo.png.jpg" alt="Shree Healthcare Logo" class="h-14 w-auto mr-3">
+                <div class="flex flex-col">
+                    <span class="text-xl font-bold text-brandBlue leading-none uppercase">SHREE</span>
+                    <span class="text-xs tracking-[0.2em] text-gray-500 font-semibold uppercase">Healthcare Centre</span>
+                </div>
+            </a>
+            <div class="hidden md:flex space-x-8 font-medium items-center text-sm uppercase tracking-wide">
+                <a href="#home" class="hover:text-brandGold transition">Home</a>
+                <a href="#about" class="hover:text-brandGold transition">About</a>
+                <a href="#doctors" class="hover:text-brandGold transition">Doctors</a>
+                <a href="#booking" class="bg-brandBlue text-white px-6 py-2 rounded shadow-md hover:bg-opacity-90 transition border-b-2 border-brandGold">Book Appointment</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="home" class="hero-bg h-[600px] flex items-center text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-3xl border-l-4 border-brandGold pl-6">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">Modern Healthcare <br><span class="text-brandGold">Expert Specialists</span></h1>
+                <p class="text-lg mb-8 text-gray-200">A newly established multi-specialty centre bringing the best medical minds of Bengaluru to Vijayanagar.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#booking" class="bg-brandGold px-8 py-3 rounded-md font-semibold hover:bg-yellow-700 transition uppercase tracking-wider shadow-lg">Book Appointment</a>
+                    <a href="#doctors" class="bg-white text-brandBlue px-8 py-3 rounded-md font-semibold hover:bg-gray-100 transition uppercase tracking-wider shadow-lg">Our Doctors</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Bar -->
+    <section class="container mx-auto px-6 -mt-12 relative z-10">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="bg-white p-6 rounded-lg shadow-xl text-center border-b-4 border-brandGold">
+                <h3 class="text-3xl font-bold text-brandBlue">100%</h3>
+                <p class="text-gray-500 text-sm font-semibold uppercase">Patient Care</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl text-center border-b-4 border-brandGold">
+                <h3 class="text-3xl font-bold text-brandBlue">10+</h3>
+                <p class="text-gray-500 text-sm font-semibold uppercase">Senior Specialists</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl text-center border-b-4 border-brandGold">
+                <h3 class="text-3xl font-bold text-brandBlue">LATEST</h3>
+                <p class="text-gray-500 text-sm font-semibold uppercase">Medical Tech</p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-xl text-center border-b-4 border-brandGold">
+                <h3 class="text-3xl font-bold text-brandBlue">24/7</h3>
+                <p class="text-gray-500 text-sm font-semibold uppercase">Emergency Help</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=800&q=80" alt="Hospital interior" class="rounded-lg shadow-2xl border-r-8 border-brandGold">
+                </div>
+                <div class="md:w-1/2">
+                    <span class="text-brandGold font-bold tracking-widest uppercase text-sm">Welcome to Shree Healthcare</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-brandBlue mt-2 mb-6">Advanced Medical Care in the Heart of Vijayanagar</h2>
+                    <p class="text-gray-600 mb-6 text-lg leading-relaxed">Shree Healthcare Centre is a state-of-the-art medical facility dedicated to providing high-quality, patient-centric care. Our centre is equipped with the latest diagnostic and surgical technology to ensure the best outcomes for our patients.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Highly qualified team of specialists</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Advanced diagnostic & laboratory services</li>
+                        <li class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Compassionate nursing and support staff</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6 text-center">
+            <span class="text-brandGold font-bold tracking-widest uppercase text-sm">Medical Experts</span>
+            <h2 class="text-4xl font-bold text-brandBlue mt-2">Meet Our Specialist Doctors</h2>
+            <div class="w-24 h-1 bg-brandGold mx-auto mt-4 mb-16"></div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 text-left">
+                <!-- Dr Ajay Kumar L -->
+                <div class="bg-white rounded-xl p-6 shadow-md border-b-4 border-brandBlue group">
+                    <h4 class="text-lg font-bold text-brandBlue leading-tight">Dr. Ajay Kumar L</h4>
+                    <p class="text-brandGold text-xs font-bold mb-3 uppercase tracking-wider">MBBS, MD</p>
+                    <p class="text-gray-600 text-sm">Physician and Critical Care specialist, Pain Management specialist</p>
+                </div>
+
+                <!-- Dr Keerthi Raj M A -->
+                <div class="bg-white rounded-xl p-6 shadow-md border-b-4 border-brandBlue group">
+                    <h4 class="text-lg font-bold text-brandBlue leading-tight">Dr. Keerthi Raj M A</h4>
+                    <p class="text-brandGold text-xs font-bold mb-3 uppercase tracking-wider">MBBS, MS</p>
+                    <p class="text-gray-600 text-sm">General and Laproscopic Surgeon</p>
+                </div>
+
+                <!-- Dr Manjula Devi T -->
+                <div class="bg-white rounded-xl p-6 shadow-md border-b-4 border-brandBlue group">
+                    <h4 class="text-lg font-bold text-brandBlue leading-tight">Dr. Manjula Devi T</h4>
+                    <p class="text-brandGold text-xs font-bold mb-3 uppercase tracking-wider">MBBS, DGO, DNB</p>
+                    <p class="text-gray-600 text-sm">Obstetrician and Gynaecologist, Uro-Gynaecologist</p>
+                </div>
+
+                <!-- Dr Navneeth -->
+                <div class="bg-white rounded-xl p-6 shadow-md border-b-4 border-brandBlue group">
+                    <h4 class="text-lg font-bold text-brandBlue leading-tight">Dr. Navneeth</h4>
+                    <p class="text-brandGold text-xs font-bold mb-3 uppercase tracking-wider">MBBS, MS, MCh</p>
+                    <p class="text-gray-600 text-sm">Urologist</p>
+                </div>
+
+                <!-- Dr Rajeev Kumar S -->
+                <div class="bg-white rounded-xl p-6 shadow-md border-b-4 border-brandBlue group">
+                    <h4 class="text-lg font-bold text-brandBlue leading-tight">Dr. Rajeev Kumar S</h4>
+                    <p class="text-brandGold text-xs font-bold mb-3 uppercase tracking-wider">BDS, MDS</p>
+                    <p class="text-gray-600 text-sm">Orthodontist and Maxillofacial Orthopaedican</p>
+                </div>
+
+                <!-- Dr Lakshith -->
+                <div class="bg-white rounded-xl p-6 shadow-md border-b-4 border-brandBlue group">
+                    <h4 class="text-lg font-bold text-brandBlue leading-tight">Dr. Lakshith</h4>
+                    <p class="text-brandGold text-xs font-bold mb-3 uppercase tracking-wider">MBBS, MS</p>
+                    <p class="text-gray-600 text-sm">Orthopedic Surgeon</p>
+                </div>
+
+                <!-- Dr Vani Ahuja -->
+                <div class="bg-white rounded-xl p-6 shadow-md border-b-4 border-brandBlue group">
+                    <h4 class="text-lg font-bold text-brandBlue leading-tight">Dr. Vani Ahuja</h4>
+                    <p class="text-brandGold text-xs font-bold mb-3 uppercase tracking-wider">MBBS, DNB, D.Ortho</p>
+                    <p class="text-gray-600 text-sm">Orthopedic Surgeon</p>
+                </div>
+
+                <!-- Dr Yogesh -->
+                <div class="bg-white rounded-xl p-6 shadow-md border-b-4 border-brandBlue group">
+                    <h4 class="text-lg font-bold text-brandBlue leading-tight">Dr. Yogesh</h4>
+                    <p class="text-brandGold text-xs font-bold mb-3 uppercase tracking-wider">MBBS, MS</p>
+                    <p class="text-gray-600 text-sm">ENT Surgeon</p>
+                </div>
+
+                <!-- Dr Aniketh -->
+                <div class="bg-white rounded-xl p-6 shadow-md border-b-4 border-brandBlue group">
+                    <h4 class="text-lg font-bold text-brandBlue leading-tight">Dr. Aniketh</h4>
+                    <p class="text-brandGold text-xs font-bold mb-3 uppercase tracking-wider">MBBS, MS</p>
+                    <p class="text-gray-600 text-sm">ENT Surgeon</p>
+                </div>
+
+                <!-- Dr Meghana -->
+                <div class="bg-white rounded-xl p-6 shadow-md border-b-4 border-brandBlue group">
+                    <h4 class="text-lg font-bold text-brandBlue leading-tight">Dr. Meghana</h4>
+                    <p class="text-brandGold text-xs font-bold mb-3 uppercase tracking-wider">MBBS, MD</p>
+                    <p class="text-gray-600 text-sm">Dermatologist and Venereologist</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Booking -->
+    <section id="booking" class="py-20 bg-brandBlue">
+        <div class="container mx-auto px-6">
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col lg:flex-row">
+                <div class="lg:w-1/3 bg-brandGold p-12 text-white">
+                    <h2 class="text-3xl font-bold mb-6">Appointment</h2>
+                    <p class="mb-8 opacity-90">Please fill out the form to request a consultation. Our team will contact you shortly to confirm.</p>
+                    <div class="space-y-4 text-sm font-semibold">
+                        <p><i class="fas fa-clock mr-3"></i> Mon-Sat: 09:00 AM - 08:00 PM</p>
+                        <p><i class="fas fa-phone mr-3"></i> +91 91871 11055</p>
+                    </div>
+                </div>
+                <div class="lg:w-2/3 p-8 lg:p-12">
+                    <form class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+                        <input type="text" placeholder="Patient Name" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none">
+                        <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none">
+                        <select class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none">
+                            <option>Choose Specialist</option>
+                            <option>Dr. Ajay Kumar L</option>
+                            <option>Dr. Keerthi Raj</option>
+                            <option>Dr. Manjula Devi</option>
+                            <option>Dr. Navneeth</option>
+                            <option>Dr. Meghana</option>
+                        </select>
+                        <input type="date" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none">
+                        <div class="md:col-span-2">
+                            <button type="submit" class="w-full bg-brandBlue text-white font-bold py-4 rounded-lg shadow-lg hover:bg-opacity-90 transition uppercase tracking-widest">Book Now</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div class="bg-gray-50 p-8 rounded-xl border-l-8 border-brandGold shadow-sm">
+                <h3 class="text-2xl font-bold text-brandBlue mb-6">Get in Touch</h3>
+                <p class="text-gray-600 mb-8 leading-relaxed">
+                    633/62, 5th main, 13th Cross Rd, MC Layout, <br>Vijayanagar, Bengaluru, Karnataka 560040
+                </p>
+                <div class="space-y-4 mb-8 font-bold text-brandBlue">
+                    <p><i class="fas fa-phone-alt text-brandGold mr-2"></i> +91 91871 11055</p>
+                    <p><i class="fas fa-envelope text-brandGold mr-2"></i> shreehealthcarecentre25@gmail.com</p>
+                </div>
+                <a href="https://www.google.com/maps/dir/?api=1&destination=633/62,+5th+main,+13th+Cross+Rd,+MC+Layout,+Vijayanagar,+Bengaluru,+Karnataka+560040" target="_blank" class="block bg-brandBlue text-white text-center py-4 rounded font-bold uppercase hover:bg-opacity-90">Open Directions</a>
+            </div>
+            <div class="h-[400px] lg:h-full min-h-[400px] rounded-xl overflow-hidden shadow-2xl">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.978252277051!2d77.5342738753239!3d12.973256087342125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3dd94132808b%3A0x6b301c1071286c40!2s633%2F62%2C%205th%20Main%20Rd%2C%2013th%20Cross%20Rd%2C%20MC%20Layout%2C%20Vijayanagar%2C%20Bengaluru%2C%20Karnataka%20560040!5e0!3m2!1sen!2sin!4v1710000000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-brandBlue text-white pt-16 pb-8">
+        <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div>
+                <img src="logo.png.jpg" alt="Shree Healthcare Logo" class="h-16 mb-6 brightness-110">
+                <p class="text-gray-400 text-sm leading-relaxed">Providing high-quality clinical care with a touch of compassion in Vijayanagar, Bengaluru.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 border-b border-brandGold pb-2 inline-block">Specialties</h4>
+                <ul class="text-gray-400 space-y-2 text-sm">
+                    <li>Critical Care</li>
+                    <li>General Surgery</li>
+                    <li>Gynaecology</li>
+                    <li>Urology</li>
+                    <li>Orthopedics</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 border-b border-brandGold pb-2 inline-block">Quick Links</h4>
+                <ul class="text-gray-400 space-y-2 text-sm">
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#doctors">Our Specialists</a></li>
+                    <li><a href="#booking">Book Appointment</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-bold mb-6 border-b border-brandGold pb-2 inline-block">Connect</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:bg-brandGold hover:border-brandGold transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full border border-gray-600 flex items-center justify-center hover:bg-brandGold hover:border-brandGold transition"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="container mx-auto px-6 mt-16 pt-8 border-t border-gray-800 text-center text-gray-500 text-[10px] tracking-[0.3em] uppercase">
+            <p>&copy; 2024 Shree Healthcare Centre. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
