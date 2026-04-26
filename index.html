@@ -51,6 +51,22 @@
             border: 4px solid #f3f4f6;
             background-color: #fff;
         }
+        /* Dropdown Hover Logic */
+.group:hover .group-hover\:block { display: block; }
+
+/* Interactive Tabs Styling */
+.dept-btn.active-dept {
+    border-left-color: #b58e3e !important;
+    background-color: #f9fafb !important;
+    color: #b58e3e !important;
+}
+.animate-fade-in {
+    animation: fadeIn 0.4s ease-in;
+}
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
@@ -69,40 +85,57 @@
     </div>
 
     <!-- Navigation -->
-     <nav class="bg-white shadow-lg sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="#" class="flex items-center">
-                <img src="logo.png.jpg" alt="Shree Healthcare Logo" class="h-14 w-auto mr-3">
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold text-brandBlue leading-none uppercase">SHREE</span>
-                    <span class="text-xs tracking-[0.2em] text-gray-500 font-semibold uppercase">Healthcare Centre</span>
-                </div>
-            </a>
+<nav class="bg-white shadow-lg sticky top-0 z-50 text-brandBlue">
+    <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+        <a href="#" class="flex items-center">
+            <img src="logo.png.jpg" alt="Shree Healthcare Logo" class="h-14 w-auto mr-3">
+            <div class="flex flex-col">
+                <span class="text-xl font-bold leading-none uppercase">SHREE</span>
+                <span class="text-xs tracking-[0.2em] text-gray-500 font-semibold uppercase">Healthcare Centre</span>
+            </div>
+        </a>
 
-            <!-- Mobile Menu Button (Hamburger) -->
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-brandBlue focus:outline-none">
-                    <i class="fas fa-bars text-2xl"></i>
+        <!-- Mobile Menu Button -->
+        <div class="md:hidden">
+            <button id="mobile-menu-button" class="focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex space-x-8 font-medium items-center text-sm uppercase tracking-wide">
+            <a href="#home" class="hover:text-brandGold transition">Home</a>
+            <a href="#about" class="hover:text-brandGold transition">About</a>
+            
+            <!-- Departments Dropdown -->
+            <div class="relative group">
+                <button class="hover:text-brandGold transition flex items-center gap-1 uppercase">
+                    Departments <i class="fas fa-chevron-down text-[10px]"></i>
                 </button>
+                <div class="absolute hidden group-hover:block bg-white shadow-xl rounded-lg mt-0 py-4 w-64 border-t-4 border-brandGold z-[100]">
+                    <a href="#departments" onclick="openDept(event, 'medicine')" class="block px-6 py-2 hover:bg-gray-50 hover:text-brandGold transition">General Medicine</a>
+                    <a href="#departments" onclick="openDept(event, 'surgery')" class="block px-6 py-2 hover:bg-gray-50 hover:text-brandGold transition">General Surgery</a>
+                    <a href="#departments" onclick="openDept(event, 'obstetrics')" class="block px-6 py-2 hover:bg-gray-50 hover:text-brandGold transition">Obstetrics</a>
+                    <a href="#departments" onclick="openDept(event, 'gynaecology')" class="block px-6 py-2 hover:bg-gray-50 hover:text-brandGold transition">Gynaecology</a>
+                    <a href="#departments" onclick="openDept(event, 'anaesthesia')" class="block px-6 py-2 hover:bg-gray-50 hover:text-brandGold transition">Pain Management</a>
+                    <a href="#departments" onclick="openDept(event, 'dental')" class="block px-6 py-2 hover:bg-gray-50 hover:text-brandGold transition">Dental & Maxillo-Facial</a>
+                </div>
             </div>
 
-            <!-- Desktop Navigation (Hidden on Mobile) -->
-            <div class="hidden md:flex space-x-8 font-medium items-center text-sm uppercase tracking-wide">
-                <a href="#home" class="hover:text-brandGold transition">Home</a>
-                <a href="#about" class="hover:text-brandGold transition">About</a>
-                <a href="#doctors" class="hover:text-brandGold transition">Doctors</a>
-                <a href="#booking" class="bg-brandBlue text-white px-6 py-2 rounded shadow-md hover:bg-opacity-90 transition border-b-2 border-brandGold">Book Appointment</a>
-            </div>
+            <a href="#doctors" class="hover:text-brandGold transition">Doctors</a>
+            <a href="#booking" class="bg-brandBlue text-white px-6 py-2 rounded shadow-md hover:bg-opacity-90 transition border-b-2 border-brandGold">Book Appointment</a>
         </div>
+    </div>
 
-        <!-- Mobile Menu Dropdown (Hidden by default) -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 flex flex-col p-4 space-y-4 font-medium uppercase text-sm">
-            <a href="#home" class="mobile-link hover:text-brandGold transition">Home</a>
-            <a href="#about" class="mobile-link hover:text-brandGold transition">About</a>
-            <a href="#doctors" class="mobile-link hover:text-brandGold transition">Doctors</a>
-            <a href="#booking" class="mobile-link bg-brandBlue text-white px-6 py-3 rounded text-center">Book Appointment</a>
-        </div>
-    </nav>
+    <!-- Mobile Menu Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t p-4 space-y-4 font-medium uppercase text-sm">
+        <a href="#home" class="mobile-link block">Home</a>
+        <a href="#about" class="mobile-link block">About</a>
+        <a href="#departments" class="mobile-link block">Departments</a>
+        <a href="#doctors" class="mobile-link block">Doctors</a>
+        <a href="#booking" class="mobile-link bg-brandBlue text-white px-6 py-3 rounded text-center block">Book Appointment</a>
+    </div>
+</nav>
 
     <!-- Hero -->
     <header id="home" class="hero-bg h-[500px] flex items-center text-white">
@@ -183,6 +216,144 @@
             </div>
         </div>
     </section>
+    <!-- INTERACTIVE DEPARTMENTS -->
+<section id="departments" class="py-24 bg-gray-50">
+    <div class="container mx-auto px-6">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <span class="text-brandGold font-bold tracking-widest uppercase text-sm">Specialized Services</span>
+            <h2 class="text-4xl font-bold text-brandBlue mt-2 mb-4">Our Departments</h2>
+            <p class="text-gray-600">Click a department to see our comprehensive list of specialized medical services.</p>
+        </div>
+
+        <div class="flex flex-col lg:flex-row gap-8">
+            <!-- Sidebar Tabs -->
+            <div class="lg:w-1/3 flex flex-col space-y-2">
+                <button onclick="openDept(event, 'medicine')" class="dept-btn active-dept flex items-center justify-between p-5 rounded-xl border-l-4 border-transparent bg-white shadow-sm hover:bg-gray-50 transition-all text-left group">
+                    <span class="font-bold">General Medicine</span>
+                    <i class="fas fa-chevron-right text-gray-300"></i>
+                </button>
+                <button onclick="openDept(event, 'surgery')" class="dept-btn flex items-center justify-between p-5 rounded-xl border-l-4 border-transparent bg-white shadow-sm hover:bg-gray-50 transition-all text-left group">
+                    <span class="font-bold text-brandBlue group-hover:text-brandGold">General Surgery</span>
+                    <i class="fas fa-chevron-right text-gray-300"></i>
+                </button>
+                <button onclick="openDept(event, 'obstetrics')" class="dept-btn flex items-center justify-between p-5 rounded-xl border-l-4 border-transparent bg-white shadow-sm hover:bg-gray-50 transition-all text-left group">
+                    <span class="font-bold text-brandBlue group-hover:text-brandGold">Obstetrics</span>
+                    <i class="fas fa-chevron-right text-gray-300"></i>
+                </button>
+                <button onclick="openDept(event, 'gynaecology')" class="dept-btn flex items-center justify-between p-5 rounded-xl border-l-4 border-transparent bg-white shadow-sm hover:bg-gray-50 transition-all text-left group">
+                    <span class="font-bold text-brandBlue group-hover:text-brandGold">Gynaecology Services</span>
+                    <i class="fas fa-chevron-right text-gray-300"></i>
+                </button>
+                <button onclick="openDept(event, 'anaesthesia')" class="dept-btn flex items-center justify-between p-5 rounded-xl border-l-4 border-transparent bg-white shadow-sm hover:bg-gray-50 transition-all text-left group">
+                    <span class="font-bold text-brandBlue group-hover:text-brandGold">Anaesthesia & Pain Mgmt</span>
+                    <i class="fas fa-chevron-right text-gray-300"></i>
+                </button>
+                <button onclick="openDept(event, 'dental')" class="dept-btn flex items-center justify-between p-5 rounded-xl border-l-4 border-transparent bg-white shadow-sm hover:bg-gray-50 transition-all text-left group">
+                    <span class="font-bold text-brandBlue group-hover:text-brandGold">Dental & Maxillo-Facial</span>
+                    <i class="fas fa-chevron-right text-gray-300"></i>
+                </button>
+            </div>
+
+            <!-- Content Area -->
+            <div class="lg:w-2/3 bg-white rounded-3xl shadow-xl p-8 md:p-12 border border-gray-100 min-h-[500px]">
+                
+                <!-- General Medicine -->
+                <div id="medicine" class="dept-content block animate-fade-in">
+                    <h3 class="text-2xl font-bold text-brandBlue mb-2 uppercase">General Medicine</h3>
+                    <p class="text-brandGold font-semibold text-sm mb-8 border-b pb-4">Primary & Critical Care Illness Management</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Respiratory Illness</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Cardiac Illness</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Gastric Illness</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Neurology Illness</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Trauma Care</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> OPD & Inpatient Services</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Emergency Services</div>
+                    </div>
+                </div>
+
+                <!-- General Surgery -->
+                <div id="surgery" class="dept-content hidden animate-fade-in">
+                    <h3 class="text-2xl font-bold text-brandBlue mb-2 uppercase">General Surgery</h3>
+                    <p class="text-brandGold font-semibold text-sm mb-8 border-b pb-4">Painless Surgeries & Faster Recovery Procedures</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Laparoscopic Surgeries</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Varicose Veins</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Breast Surgeries</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Circumcision</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Gall Bladder Removal</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Piles, Fistula & Hernia</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Appendix & Thyroidectomy</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Lipoma & Cyst Removals</div>
+                    </div>
+                </div>
+
+                <!-- Obstetrics -->
+                <div id="obstetrics" class="dept-content hidden animate-fade-in">
+                    <h3 class="text-2xl font-bold text-brandBlue mb-2 uppercase">Obstetrics</h3>
+                    <p class="text-brandGold font-semibold text-sm mb-8 border-b pb-4">Mother and Newborn Comprehensive Care</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> ANC Services</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Normal Deliveries</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> High Risk Pregnancies</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Caesarean Deliveries</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Post-Natal Care</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Abortion & MTP Services</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Manual Vacuum Aspiration (MVA)</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Birth Control Services</div>
+                    </div>
+                </div>
+
+                <!-- Gynaecology -->
+                <div id="gynaecology" class="dept-content hidden animate-fade-in">
+                    <h3 class="text-2xl font-bold text-brandBlue mb-2 uppercase">Gynaecology Services</h3>
+                    <p class="text-brandGold font-semibold text-sm mb-8 border-b pb-4">Advanced Gynaec Care & Cancer Screening</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> D&C Procedures</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Cancer Screening (Breast, Uterus)</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> HPV Vaccination</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Irregular Menses (PCOS/Fibroid)</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> No Scar Hysterectomy (NDVH)</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Laparoscopic Hysterectomy</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Ovarian Cysts Surgeries</div>
+                    </div>
+                </div>
+
+                <!-- Anaesthesia -->
+                <div id="anaesthesia" class="dept-content hidden animate-fade-in">
+                    <h3 class="text-2xl font-bold text-brandBlue mb-2 uppercase">Pain Management</h3>
+                    <p class="text-brandGold font-semibold text-sm mb-8 border-b pb-4">Anaesthesia & Palliative Care</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Regional & General Anaesthesia</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Pain Medicine & Ambulatory Analgesia</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Painless Surgery Support</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Post-Chemo Pain Management</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Critical Care Services</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Old Age Palliative Services</div>
+                    </div>
+                </div>
+
+                <!-- Dental -->
+                <div id="dental" class="dept-content hidden animate-fade-in">
+                    <h3 class="text-2xl font-bold text-brandBlue mb-2 uppercase">Dental & Maxillo-Facial</h3>
+                    <p class="text-brandGold font-semibold text-sm mb-8 border-b pb-4">Specialized Oral & Reconstruction Surgery</p>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Orthodontics (Braces/Aligners)</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Endodontics (Root Canal)</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Oral & Wisdom Tooth Surgery</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Maxillo-Facial (Trauma/Cancers)</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Implantology (Dental Implants)</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Periodontics (Gum Care)</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Pedodontics (Child Dentistry)</div>
+                        <div class="flex items-center"><i class="fas fa-check-circle text-brandGold mr-3"></i> Prosthodontics (Dentures)</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Doctors Section WITH AUTO SCROLL AND AVATARS -->
      <section id="doctors" class="py-24 bg-white overflow-hidden">
@@ -435,6 +606,37 @@
             menu.classList.add('hidden');
         });
     });
+    function openDept(evt, deptName) {
+    var i, tabcontent, tablinks;
+    
+    // 1. Hide all contents
+    tabcontent = document.getElementsByClassName("dept-content");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    // 2. Remove active class from all buttons
+    tablinks = document.getElementsByClassName("dept-btn");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].classList.remove("active-dept");
+    }
+
+    // 3. Show current tab content and add active class to button
+    document.getElementById(deptName).style.display = "block";
+    
+    // Only highlight the sidebar button if we clicked one
+    if(evt.currentTarget.classList.contains('dept-btn')) {
+        evt.currentTarget.classList.add("active-dept");
+    } else {
+        // If clicked from the dropdown, find the matching sidebar button to highlight
+        const sideBtns = document.querySelectorAll('.dept-btn');
+        sideBtns.forEach(btn => {
+            if(btn.innerText.toLowerCase().includes(deptName.substring(0,5))) {
+                btn.classList.add("active-dept");
+            }
+        });
+    }
+}
 </script>
 
 </body>
