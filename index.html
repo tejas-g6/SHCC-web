@@ -536,21 +536,38 @@
                     </div>
                 </div>
                 <div class="lg:w-2/3 p-8 lg:p-12">
-                    <form class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
-                        <input type="text" placeholder="Patient Name" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none">
-                        <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none">
-                        <select class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none">
-                            <option>Choose Specialist</option>
-                            <option>Dr. Ajay Kumar L</option>
-                            <option>Dr. Keerthi Raj</option>
-                            <option>Dr. Manjula Devi</option>
-                            <option>Dr. Navneeth</option>
-                        </select>
-                        <input type="date" class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none">
-                        <div class="md:col-span-2">
-                            <button type="submit" class="w-full bg-brandBlue text-white font-bold py-4 rounded-lg shadow-lg hover:bg-opacity-90 transition uppercase tracking-widest">Book Now</button>
-                        </div>
-                    </form>
+                    <!-- Updated Appointment Form -->
+<form id="appointment-form" action="https://formspree.io/f/xqenzvno" method="POST" class="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm">
+    <!-- Custom Subject for your Email -->
+    <input type="hidden" name="_subject" value="New Appointment Request - Shree Healthcare">
+
+    <input type="text" name="Patient Name" placeholder="Patient Name" required 
+           class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none">
+    
+    <input type="tel" name="Phone Number" placeholder="Phone Number" required 
+           class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none">
+    
+    <select name="Specialist Requested" required 
+            class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none">
+        <option value="" disabled selected>Choose Specialist</option>
+        <option>Dr. Ajay Kumar L</option>
+        <option>Dr. Keerthi Raj</option>
+        <option>Dr. Manjula Devi</option>
+        <option>Dr. Navneeth</option>
+        <option>Dr. Rajeev Kumar S</option>
+        <option>Other / Not Sure</option>
+    </select>
+    
+    <input type="date" name="Preferred Date" required 
+           class="w-full px-4 py-3 rounded-lg border focus:ring-2 focus:ring-brandGold outline-none">
+    
+    <div class="md:col-span-2">
+        <button type="submit" class="w-full bg-brandBlue text-white font-bold py-4 rounded-lg shadow-lg hover:bg-opacity-90 transition uppercase tracking-widest">
+            Submit Appointment Request
+        </button>
+    <div id="form-status" class="hidden md:col-span-2 p-4 rounded-lg text-center font-bold"></div>    
+    </div>
+</form>
                 </div>
             </div>
         </div>
@@ -691,6 +708,44 @@
     }
 }
 </script>
+<script>
+  const form = document.getElementById("appointment-form");
+  const status = document.getElementById("form-status");
 
+  form.onsubmit = async (e) => {
+    e.preventDefault(); // This stops the page from redirecting to Formspree
+    const data = new FormData(form);
+    
+    // Change button text to show "Sending..."
+    const btn = form.querySelector('button[type="submit"]');
+    const originalBtnText = btn.innerText;
+    btn.innerText = "SENDING...";
+    btn.disabled = true;
+
+    try {
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        status.innerHTML = "Thanks! Your appointment request has been sent successfully.";
+        status.classList.remove("hidden", "bg-red-100", "text-red-700");
+        status.classList.add("bg-green-100", "text-green-700");
+        form.reset(); // Clear the form
+        btn.innerText = "SENT!";
+      } else {
+        throw new Error();
+      }
+    } catch (error) {
+      status.innerHTML = "Oops! There was a problem. Please call us directly.";
+      status.classList.remove("hidden", "bg-green-100", "text-green-700");
+      status.classList.add("bg-red-100", "text-red-700");
+      btn.disabled = false;
+      btn.innerText = originalBtnText;
+    }
+  };
+</script>
 </body>
 </html>
